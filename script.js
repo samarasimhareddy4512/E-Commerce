@@ -1,6 +1,5 @@
 let productContainer = document.querySelector('.product-container');
 
-
 let url = 'https://fakestoreapi.com/products';
 
 function loadProducts() {
@@ -22,16 +21,16 @@ function displayProducts(products) {
         img.alt = product.title;
         
         let category = document.createElement('p');
-        category.innerText = Category: ${product.category};
+        category.innerText = `Category: ${product.category}`;
         
         let description = document.createElement('p');
         description.innerText = product.description;
         
         let price = document.createElement('p');
-        price.innerText = Price: $${product.price};
+        price.innerText = `Price: $${product.price}`;
         
         let rating = document.createElement('p');
-        rating.innerText = Rating: ${product.rating.rate} (${product.rating.count} reviews);
+        rating.innerText = `Rating: ${product.rating.rate} (${product.rating.count} reviews)`;
 
         productDiv.appendChild(img);
         productDiv.appendChild(category);
